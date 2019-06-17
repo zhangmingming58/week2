@@ -1,6 +1,5 @@
 package com.zhangkai.common.utils;
 
-import static org.junit.Assert.*;
 
 import java.io.UnsupportedEncodingException;
 

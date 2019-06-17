@@ -2,7 +2,6 @@ package com.zhangkai.common.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
-import java.util.Random;
 
 import org.junit.Test;
 
@@ -37,11 +36,6 @@ public class PersonTest {
 					RandomUtil.random(1, 120), endDate);
 			System.out.println(person);
 		}
-	}
-
-	@Test
-	public void test2() {
-
 	}
 
 }
