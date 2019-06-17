@@ -1,0 +1,42 @@
+package com.zhangkai.common.utils;
+
+
+import java.util.Set;
+
+import org.junit.Test;
+
+public class RandomUtilTest {
+//测试随机数
+	@Test
+	public void testRandom() {
+		for (int i = 0; i < 5; i++) {
+			System.out.println(RandomUtil.random(0, 5));
+		}
+	}
+//测试不同随机数
+	@Test
+	public void testSubRandom() {
+		for (int i = 0; i < 5; i++) {
+			Set<Integer> subRandom = RandomUtil.subRandom(0, 5,5);
+			for (int j : subRandom) {
+				System.out.print(j+",");
+			}
+			System.out.println();
+		}
+	}
+//测试随机字符
+	@Test
+	public void testRandomCharacter() {
+		for (int i = 0; i < 5; i++) {
+			System.out.println(RandomUtil.randomCharacter());
+		}
+	}
+//测试验证码
+	@Test
+	public void testRandomString() {
+		for (int i = 0; i < 5; i++) {
+			System.out.println(RandomUtil.randomString(5));
+		}
+	}
+
+}
