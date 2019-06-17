@@ -10,11 +10,11 @@ import java.util.Date;
  * @date: 2019年6月17日 上午8:55:30
  */
 public class Person {
-	private int id;
-	private String name;
-	private int age;
-	private String about;
-	private Date datea;
+	private int id;//ID
+	private String name;//姓名
+	private int age;//年龄
+	private String about;//介绍
+	private Date datea;//注册日期
 
 	public int getId() {
 		return id;
