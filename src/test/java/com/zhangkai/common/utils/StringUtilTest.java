@@ -5,7 +5,13 @@ import static org.junit.Assert.*;
 import java.io.UnsupportedEncodingException;
 
 import org.junit.Test;
-
+/**
+ * 
+ * @ClassName: StringUtilTest 
+ * @Description: 字符测试类
+ * @author: ZK
+ * @date: 2019年6月17日 上午10:13:48
+ */
 public class StringUtilTest {
 	// 测试空字符串
 	@Test

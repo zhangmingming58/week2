@@ -4,7 +4,13 @@ package com.zhangkai.common.utils;
 import java.util.Set;
 
 import org.junit.Test;
-
+/**
+ * 
+ * @ClassName: RandomUtilTest 
+ * @Description: 随机数测试类
+ * @author: ZK
+ * @date: 2019年6月17日 上午10:14:00
+ */
 public class RandomUtilTest {
 //测试随机数
 	@Test

@@ -38,12 +38,28 @@ public class StringUtil {
 			"督", "子车", "颛孙", "端木", "巫马", "公西", "漆雕", "乐正", "壤驷", "公良", "拓拔", "夹谷", "宰父", "谷梁", "段干", "百里", "东郭", "南门",
 			"呼延", "归", "海", "羊舌", "微生", "梁丘", "左丘", "东门", "西门", "南宫" };
 
-	// 方法1：判断源字符串是否有值，空引号(空白字符串)也算没值 (5分)
+	/**
+	 * 
+	 * @Title: hasLength
+	 * @Description:方法1：判断源字符串是否有值，空引号(空白字符串)也算没值 (5分)
+	 * @param src 指定字符串
+	 * @return
+	 * @return: boolean
+	 */
+	//
 	public static boolean hasLength(String src) {
 		return src != null && src.length() > 0;
 	}
 
-	// 方法2：判断源字符串是否有值，空引号(空白字符串)和空格也算没值 (5分)
+	/**
+	 * 
+	 * @Title: hasText
+	 * @Description:方法2：判断源字符串是否有值，空引号(空白字符串)和空格也算没值 (5分)
+	 * @param src 指定字符串
+	 * @return
+	 * @return: boolean
+	 */
+	//
 	public static boolean hasText(String src) {
 		return src != null && src.trim().length() > 0;
 	}
@@ -66,7 +82,15 @@ public class StringUtil {
 		return str;
 	}
 
-	// 方法3：返回参数单个中文汉字字符串，字符集必须在GB2312(相当于中文简体)范围内，例如“中呀被”(5分)
+	/**
+	 * 
+	 * @Title: randomChineseString
+	 * @Description: 方法3：返回参数单个中文汉字字符串，字符集必须在GB2312(相当于中文简体)范围内，例如“中呀被”(5分)
+	 * @return
+	 * @throws UnsupportedEncodingException
+	 * @return: String
+	 */
+
 	public static String randomChineseString() throws UnsupportedEncodingException {
 		Random random = new Random();
 		String s = (char) (random.nextInt(40869 - 19968 + 1) + 19968) + "";

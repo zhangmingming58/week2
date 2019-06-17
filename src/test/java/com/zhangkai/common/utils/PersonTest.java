@@ -1,4 +1,4 @@
-package com.zhangkai.test;
+package com.zhangkai.common.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Calendar;
@@ -17,26 +17,32 @@ import com.zhangkai.common.utils.StringUtil;
  * @author: ZK
  * @date: 2019年6月17日 上午8:58:03
  */
-public class MyTest {
-	//测试Person类
+public class PersonTest {
+	// 测试Person类
 	@Test
 	public void utilsTest() throws UnsupportedEncodingException {
+		// 生成10000个对象
 		for (int i = 0; i < 10000; i++) {
+			// 注册日期属性值模拟2010年1月1日至今任意随机时间（4分）
 			Date date = new Date();
 			int year = RandomUtil.random(110, 119);
-			date.setYear(year );
+			date.setYear(year);
 			int month = RandomUtil.random(1, 12);
 			date.setMonth(month);
-			if (month==2) {
+			if (month == 2) {
 				date.setDate(RandomUtil.random(1, 28));
-			}else if (month==4||month==6||month==9||month==11) {
+			} else if (month == 4 || month == 6 || month == 9 || month == 11) {
 				date.setDate(RandomUtil.random(1, 30));
-			}else {
+			} else {
 				date.setDate(RandomUtil.random(1, 31));
 			}
-			Person person = new Person(i, StringUtil.generateChineseName(), StringUtil.randomChineseString(140),RandomUtil.random(1,120), date);
+			// 姓名属性值调用StringUtil.generateChineseName()创建（4分）
+			// 年龄属性值调用RandomUtil.random()创建，必须在1-120岁之间（4分）
+			// 介绍属性值调用StringUtil.randomChineseString()创建，字数为140个随机汉字（4分）
+			Person person = new Person(i, StringUtil.generateChineseName(), StringUtil.randomChineseString(140),
+					RandomUtil.random(1, 120), date);
 			System.out.println(person);
 		}
 	}
-	
+
 }
