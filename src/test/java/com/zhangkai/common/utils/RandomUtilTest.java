@@ -1,6 +1,7 @@
 package com.zhangkai.common.utils;
 
 
+import java.util.Random;
 import java.util.Set;
 
 import org.junit.Test;
