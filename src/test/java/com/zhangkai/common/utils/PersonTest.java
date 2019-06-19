@@ -1,13 +1,13 @@
 package com.zhangkai.common.utils;
 
 import java.io.UnsupportedEncodingException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import org.junit.Test;
 
 import com.zhangkai.bean.Person;
-import com.zhangkai.common.utils.RandomUtil;
-import com.zhangkai.common.utils.StringUtil;
 
 /**
  * 
@@ -24,7 +24,8 @@ public class PersonTest {
 		// 生成10000个对象
 		for (int i = 0; i < 10000; i++) {
 			// 注册日期属性值模拟2010年1月1日至今任意随机时间（4分）
-			Date fromDate = new Date(110, 01, 01);
+			Date fromDate = new Date(110, 00, 01);
+			System.out.println(fromDate);
 			long srcTime = fromDate.getTime();
 			Date endDate = new Date();
 			long tarTime = endDate.getTime();
@@ -38,4 +39,25 @@ public class PersonTest {
 		}
 	}
 
+	@Test
+	public void testDate() {
+		Calendar c = Calendar.getInstance();
+		// 月份0--11
+		c.set(2010, 0, 1);
+		// 获取2010年1月1日的毫秒数
+		long l = c.getTimeInMillis();
+		System.out.println(l);
+		// 设置日历时间为当前的日期
+		c.setTime(new Date());
+		// 当前时间的毫秒数
+		long l2 = c.getTimeInMillis();
+		System.out.println(l2);
+		for (int i = 0; i < 1000; i++) {
+			long x = l + (long) (Math.random() * (l2 - l));
+			// 用毫秒数设置为当前日历日期
+			c.setTimeInMillis(x);
+			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+			System.out.println(df.format(c.getTime()));
+		}
+	}
 }

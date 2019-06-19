@@ -30,6 +30,19 @@ public class RandomUtilTest {
 			System.out.println();
 		}
 	}
+
+//测试不同随机数
+	@Test
+	public void testSubRandom1() {
+		for (int i = 0; i < 5; i++) {
+			int[] random1 = RandomUtil.subRandom1(0, 5, 5);
+			for (int j : random1) {
+				System.out.print(j+",");
+			}
+			System.out.println();
+		}
+	}
+
 //测试随机字符
 	@Test
 	public void testRandomCharacter() {

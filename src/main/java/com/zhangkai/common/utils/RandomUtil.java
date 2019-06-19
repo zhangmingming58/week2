@@ -47,6 +47,22 @@ public class RandomUtil {
 
 		return set;
 	}
+	public static int[] subRandom1(int min, int max, int subs) {
+		
+		int[] num = new int[subs];
+		int i = 0;
+		Set<Integer> set = new HashSet<Integer>();
+		while (set.size() != subs) {
+			int a = random(min, max);
+			boolean flag = set.add(a);
+			if (flag) {
+				num[i]=a;
+				i++;
+			}
+		}
+		
+		return num;
+	}
 
 	/**
 	 * 
